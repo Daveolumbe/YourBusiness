@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	</head>
-	<body>
+	<body ng-app="MyApp">
 
 		
 		
@@ -39,10 +39,10 @@
 					<p>
 <h1 style="color:#1e5869">Welcome</h1>Guest edited by former Dragons’ Den investor and business guru, James Caan CBE, Your Business magazine gives you all the advice you need if you are starting and running your own business. From finance, to e-commerce and accountancy to marketing, Your Business is an expert-led publication that gives you the inside track on how to build and run a successful business.</p>	</div>
 <div class="col-md-4 hide"><img src="imgs/yourbusiness.png" width="" class="img-responsive pull-right"></div>
-				<div class="col-md-4" id="hide">
+				<div class="col-md-4" id="hide" ng-controller="User">
 					<h1 class="text-center" style="color:#1e5869" id="formme">Get your free copy</h1>
 							<!-- SIGNUP FORM  -->	
-					<form class="form-group" name="userReg">
+					<form class="form-group" name="userReg" ng-submit="submit()" class="form-horizontal" novalidate novalidate>
 
 						<div class="form-group">
 		    				<input type="text"  class="form-control"  placeholder="Your name">
