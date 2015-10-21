@@ -53,6 +53,12 @@ input.error {
 	display: none;
 }
 
+input.ng-invalid.ng-dirty {
+  background-color: red;
+}
+input.ng-valid.ng-dirty {
+  background-color: green;
+}
 
 /*Paralax sections*/
 
