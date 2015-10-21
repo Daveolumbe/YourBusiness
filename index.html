@@ -48,13 +48,13 @@
 		    				<input type="text"  class="form-control"  placeholder="Your name">
 		    			</div>
 		    			<div class="form-group">
-		    				<input type="text" class="form-control" name="emailtxt" id="emailtxt" placeholder="Email address*" required>
+		    				<input type="text" class="form-control" ng-model="user.emailtxt" name="emailtxt" id="emailtxt" placeholder="Email address*" required>
 		    			</div>
 
 						<div class="form-group">
 		    				<input type="text" class="form-control"  placeholder="Your company name" />
 		    			</div>
-		    			<button type="button" class="btn form-control btn-success" style="border-color:#1e5869; background-color:#1e5869; color:#fff" onclick="Validate()">REGISTER</button> 
+		    			<button type="button" ng-disabled="form.$invalid" class="btn form-control btn-success" style="border-color:#1e5869; background-color:#1e5869; color:#fff" onclick="Validate()">REGISTER</button> 
 		    		</form>
 				</div>
 				<div class="col-md-4 text-center" id="show" style="margin-top:50px">
