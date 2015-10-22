@@ -41,15 +41,17 @@
 <div class="col-md-4 hide"><img src="imgs/yourbusiness.png" width="" class="img-responsive pull-right"></div>
 				<div class="col-md-4" id="hide" >
 					<h1 class="text-center" style="color:#1e5869" id="formme">Get your free copy</h1>
+					
 							<!-- SIGNUP FORM  -->	
 					<form class="form-group" name="userReg" ng-submit="submitForm(userReg.$valid)" novalidate>
 
+							<div class="form-group" g-class="{ 'has-error' : userReg.email.$invalid && !userReg.email.$pristine }">
+		    				<input type="email" class="form-control" name="email" id="email"  ng-model="user.email" placeholder="Email address*" required>
+		    				<p ng-show="userReg.email.$invalid && !userReg.email.$pristine" class="help-block alert alert-warning">enter a valid email address* </p>
+		    			</div>
+
 						<div class="form-group">
 		    				<input type="text"  class="form-control"  placeholder="Your name">
-		    			</div>
-		    			<div class="form-group" g-class="{ 'has-error' : userReg.email.$invalid && !userReg.email.$pristine }">
-		    				<input type="text" class="form-control" name="email" id="email"  ng-model="user.email" placeholder="Email address*" required>
-		    				<p ng-show="userReg.email.$invalid && !userReg.email.$pristine" class="help-block">Enter a valid email</p>
 		    			</div>
 
 						<div class="form-group" >
