@@ -56,6 +56,9 @@ while($records = mysql_fetch_array($myquery)){
 	echo "</table></div>";
 mysql_close($dbcon);
 ?>
+
+<a href="export.php" class="btn btn-danger btn-lg pull-right"> EXPORT DATA </a>
+
 		</div>
 		
 		<footer>
