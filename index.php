@@ -5,11 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>YOUR BUSINESS</title>
-
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
 
 	</head>
 	<body ng-app="validationApp" ng-controller="mainController">
@@ -17,7 +18,7 @@
 		
 		
 			<div class="container">
-				<a href="index.php"><img src="imgs/logo.png" class="img-responsive logo"></a>
+				<a href="index.php"><img src="imgs/logo.png" width="100%" class="img-responsive logo"></a>
 			</div>
 	<section class="module parallax parallax-1 hide">
         <div class="container">
@@ -58,7 +59,7 @@
 						<div class="form-group" >
 		    				<input type="text" class="form-control" name="company"  placeholder="Your company name" />
 		    			</div>
-		    			<input type="submit" name="submit" ng-disabled="!userReg.$valid" class="btn form-control btn-success" style="border-color:#1e5869; background-color:#1e5869; color:#fff" onclick="Validate()">
+		    			<input type="submit" value="REGISTER" name="submit" ng-disabled="!userReg.$valid" class="btn form-control btn-success" style="border-color:#1e5869; background-color:#1e5869; color:#fff" onclick="Validate()">
 		    	</form>
 		    	<?php
 

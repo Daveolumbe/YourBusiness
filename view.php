@@ -38,16 +38,16 @@ if($myquery === FALSE) {
 }
 echo "<div class='table-responsive'><table class='table'>
 <tr>
-<th>Email</th>
-<th>Name</th>
-<th>Company</th>
-<th>Time Stamped</th>
+<th>EMAIL</th>
+<th>NAME</th>
+<th>COMPANY NAME</th>
+<th>REGISTERED DATE & TIME</th>
 </tr>";
 while($records = mysql_fetch_array($myquery)){
 	echo "<tr>";
 	echo "<td>" . $records['email'] . "</td>";
-	echo "<td>" . $records['name'] . "</td>";
-	echo "<td>" . $records['companyname'] . "</td>";
+	echo "<td class='text-capitalize'>" . $records['name'] . "</td>";
+	echo "<td class='text-uppercase'>" . $records['companyname'] . "</td>";
 	echo "<td>" . $records['Timestamp'] . "</td>";
 
 	echo "</tr>";
