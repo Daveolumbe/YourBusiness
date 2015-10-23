@@ -17,7 +17,7 @@
 		
 		
 			<div class="container">
-				<a href="index.html"><img src="imgs/logo.png" class="img-responsive logo"></a>
+				<a href="index.php"><img src="imgs/logo.png" class="img-responsive logo"></a>
 			</div>
 	<section class="module parallax parallax-1 hide">
         <div class="container">
@@ -43,25 +43,61 @@
 					<h1 class="text-center" style="color:#1e5869" id="formme">Get your free copy</h1>
 
 							<!-- SIGNUP FORM  -->	
-					<form class="form-group" name="userReg" ng-submit="submitForm(userReg.$valid)" novalidate>
+				<form class="form-group" method="post" action="<?=$_SERVER['PHP_SELF']?>" name="userReg" ng-submit="submitForm(userReg.$valid)" novalidate>
 
 							<div class="form-group" g-class="{ 'has-error' : userReg.email.$invalid && !userReg.email.$pristine }">
+
 		    				<input type="email" class="form-control" name="email" id="email"  ng-model="user.email" placeholder="Email address*" required>
 		    				<p ng-show="userReg.email.$invalid && !userReg.email.$pristine" class="help-block alert alert-warning">enter a valid email address* </p>
 		    			</div>
 
 						<div class="form-group">
-		    				<input type="text"  class="form-control"  placeholder="Your name">
+		    				<input type="text"  class="form-control"  name="name" placeholder="Your name">
 		    			</div>
 
 						<div class="form-group" >
-		    				<input type="text" class="form-control"  placeholder="Your company name" />
+		    				<input type="text" class="form-control" name="company"  placeholder="Your company name" />
 		    			</div>
-		    			<button type="button" ng-disabled="!userReg.$valid" class="btn form-control btn-success" style="border-color:#1e5869; background-color:#1e5869; color:#fff" onclick="Validate()">REGISTER</button> 
-		    		</form>
+		    			<input type="submit" name="submit" ng-disabled="!userReg.$valid" class="btn form-control btn-success" style="border-color:#1e5869; background-color:#1e5869; color:#fff" onclick="Validate()">
+		    	</form>
+		    	<?php
+
+        include_once('conn.php');
+         
+//Initialise connection and set error message 
+        if (isset($_POST['submit'])) {
+	
+	if (!$dbcon) {
+		die('unable to connect to the ' . mysql_error());
+	}
+
+	//Query to insert
+	$emailtxt = mysql_real_escape_string($_POST['email']);
+	$nametxt = mysql_real_escape_string($_POST['name']);
+	$companytxt = mysql_real_escape_string($_POST['company']);
+
+	mysql_select_db("$lovee124_ybDb145", $dbcon);
+
+	$sql = "INSERT INTO `yb_registration`(`email`, `name`, `companyname`) VALUES ('$emailtxt', '$nametxt', '$companytxt')";
+
+
+ 	mysql_query($sql);
+if (!$sql) {
+  die('Invalid query: ' . mysql_error());
+}
+else{
+echo '<div class="alert alert-info text-center"><strong>Thanks You! </strong> please download YOUR BUSINESS MAGAZINE now.</div>
+					<a href="http://europe.nxtbook.com/emp/AtHome/YourBusinessWithJamesCaanAutumn2015/index.php" target="_new" class="btn text-center btn-danger-outline form-control">READ YOUR BUSINESS MAGAZINE</a></div>';
+
+}
+  mysql_close($dbcon);
+}
+?>
+
+
 				</div>
 				<div class="col-md-4 text-center" id="show" style="margin-top:50px">
-					<div class="alert alert-info"><strong>Well done!</strong> you have successfully signing up on YOUR BUSINESS</div>
+					<div class="alert alert-info"><strong>Thanks You!</strong> please download YOUR BUSINESS MAGAZINE now.</div>
 					<a href="http://europe.nxtbook.com/emp/AtHome/YourBusinessWithJamesCaanAutumn2015/index.php" target="_new" class="btn btn-danger-outline">READ YOUR BUSINESS MAGAZINE</a></div>
 			</div>
 		</div>
@@ -87,5 +123,7 @@
 		<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 			
 		<script src="js/custom.js"></script>
+		
+		
 	</body>
 </html>

@@ -1,29 +1,23 @@
 //Custom JavaScript By David Olumbe
 
 /* Normal Js script Form Validation */
-function Validate(userReg) {
 
+
+	function Validate(userReg) {    
 
 	var emailerror = document.getElementById("email").value;
-
-
 
 	if (emailerror === "") {
 		document.getElementById("email").style.borderColor  = "#ec1e52";
 	}
 
-
-
-
 	else {
 		document.getElementById("email").style.borderColor  = "";
 	}
 
-
-
 	if (emailerror != ""){
 
-		document.getElementById("hide").style.display  = "none";
+		document.getElementById("hide").style.display  = "block";
 		document.getElementById("show").style.display  = "block";
 	}
 
@@ -49,3 +43,6 @@ function Validate(userReg) {
         };
 
     });
+    
+  
+    
