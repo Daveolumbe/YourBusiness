@@ -17,7 +17,7 @@
 		
 		
 			<div class="container">
-				<a href="index.php"><img src="imgs/logo.png" class="img-responsive logo"></a>
+				<a href=""><img src="imgs/logo.png" class="img-responsive logo"></a>
 			</div>
 
 			
