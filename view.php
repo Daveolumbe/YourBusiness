@@ -68,7 +68,7 @@ mysql_close($dbcon);
 					<img src="imgs/icons/tw.png" height="35px" width="35px">
 					<img src="imgs/icons/ln.png" height="35px" width="35px">
 				</div>
-				© 2005-2015 EMP Media. All Rights Reserved.
+				© 2015 EMP Media. All Rights Reserved. | <a href="#">Our Terms and Conditions</a>
 			</div>
 			
 

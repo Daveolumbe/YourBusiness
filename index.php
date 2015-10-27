@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>YOUR BUSINESS</title>
-		
+		<link rel="shortcut icon" href="imgs/icons/favicon.ico"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<!-- Bootstrap CSS -->
@@ -110,7 +110,7 @@ echo '<div class="alert alert-info text-center"><strong>Thanks You! </strong> pl
 					<img src="imgs/icons/tw.png" height="35px" width="35px">
 					<img src="imgs/icons/ln.png" height="35px" width="35px">
 				</div>
-				© 2005-2015 EMP Media. All Rights Reserved.
+				© 2015 EMP Media. All Rights Reserved. | <a href="#" class="active">Our Terms and Conditions</a>
 			</div>
 			
 

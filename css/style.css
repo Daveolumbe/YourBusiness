@@ -31,6 +31,9 @@ footer{
   clear: both; 
 }
 
+a {
+  color: #ddd;
+}
 
 #show{
 	display: none;
