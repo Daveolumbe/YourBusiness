@@ -30,7 +30,7 @@
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<h1 class="text-center" style="padding: 20px;" >Admin Login</h1>
-							<form class="form-group" method="post" name="userReg" ng-submit="submitForm(userReg.$valid)" novalidate>
+							<form class="form-group" method="post" action="<?=$_SERVER['PHP_SELF']?>" name="userReg" ng-submit="submitForm(userReg.$valid)" novalidate>
 
 							<div class="form-group" g-class="{ 'has-error' : userReg.email.$invalid && !userReg.email.$pristine }">
 
