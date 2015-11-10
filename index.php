@@ -10,13 +10,13 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-		
+
 
 	</head>
 	<body ng-app="validationApp" ng-controller="mainController">
 
-		
-		
+
+
 			<div class="container">
 				<a href="index.php"><img src="imgs/logo.png" width="100%" class="img-responsive logo"></a>
 			</div>
@@ -29,7 +29,7 @@
         </div>
       </section>
 
-			
+
 		<div class="container-fluid" id="bar-color">
 			<p class="container text-center">YOUR BUSINESS MAGAZINE <a href="#formme" class="btn btn-success">Download</a> </p>
 		</div>
@@ -38,12 +38,12 @@
 			<div class="row">
 				<div class="col-md-4">
 					<p>
-<h1 style="color:#1e5869">Welcome</h1>Guest edited by former Dragons’ Den investor and business guru, James Caan CBE, Your Business magazine gives you all the advice you need if you are starting and running your own business. From finance, to e-commerce and accountancy to marketing, Your Business is an expert-led publication that gives you the inside track on how to build and run a successful business.</p>	</div>
+<h1 style="color:#1e5869">Welcome</h1>Guest edited by former Dragons’ Den investor and business guru, James Caan CBE, <em>Your Business</em> magazine gives you all the advice you need if you are starting and running your own business. From finance, to e-commerce and accountancy to marketing, <em>Your Business</em> is an expert-led publication that gives you the inside track on how to build and run a successful business.</p>	</div>
 <div class="col-md-4 hide"><img src="imgs/yourbusiness.png" width="" class="img-responsive pull-right"></div>
 				<div class="col-md-4" id="hide" >
 					<h1 class="text-center" style="color:#1e5869" id="formme">Get your free copy</h1>
 
-							<!-- SIGNUP FORM  -->	
+							<!-- SIGNUP FORM  -->
 				<form class="form-group" method="post" action="<?=$_SERVER['PHP_SELF']?>" name="userReg" ng-submit="submitForm(userReg.$valid)" novalidate>
 
 							<div class="form-group" g-class="{ 'has-error' : userReg.email.$invalid && !userReg.email.$pristine }">
@@ -64,10 +64,10 @@
 		    	<?php
 
         include_once('conn.php');
-         
-//Initialise connection and set error message 
+
+//Initialise connection and set error message
         if (isset($_POST['submit'])) {
-	
+
 	if (!$dbcon) {
 		die('unable to connect to the ' . mysql_error());
 	}
@@ -87,8 +87,8 @@ if (!$sql) {
   die('Invalid query: ' . mysql_error());
 }
 else{
-echo '<div class="alert alert-info text-center"><strong>Thanks You! </strong> please download YOUR BUSINESS MAGAZINE now.</div>
-					<a href="http://europe.nxtbook.com/emp/AtHome/YourBusinessWithJamesCaanAutumn2015/index.php" target="_new" class="btn text-center btn-danger-outline form-control">READ YOUR BUSINESS MAGAZINE</a></div>';
+echo '<div class="alert alert-info text-center"><a href="http://europe.nxtbook.com/emp/AtHome/YourBusinessWithJamesCaanAutumn2015/index.php" target="_new" class="text-center"><strong>Thank You! </strong> please download YOUR BUSINESS MAGAZINE now.
+				</a></div>';
 
 }
   mysql_close($dbcon);
@@ -98,33 +98,33 @@ echo '<div class="alert alert-info text-center"><strong>Thanks You! </strong> pl
 
 				</div>
 				<div class="col-md-4 text-center" id="show" style="margin-top:50px">
-					<div class="alert alert-info"><strong>Thanks You!</strong> please download YOUR BUSINESS MAGAZINE now.</div>
-					<a href="http://europe.nxtbook.com/emp/AtHome/YourBusinessWithJamesCaanAutumn2015/index.php" target="_new" class="btn btn-danger-outline">READ YOUR BUSINESS MAGAZINE</a></div>
+					<div class="alert alert-info"><strong>Thank You!</strong> please download YOUR BUSINESS MAGAZINE now.</div>
+					<a href="http://europe.nxtbook.com/emp/AtHome/YourBusinessWithJamesCaanAutumn2015/index.php" target="_new" class="btn btn-danger-outline">Thank You! please download YOUR BUSINESS MAGAZINE now.</a></div>
 			</div>
 		</div>
-		
+
 		<footer>
 			<div class="container text-center">
 				<div>
-					<img src="imgs/icons/fb.png" height="35px" width="35px"> 
+					<img src="imgs/icons/fb.png" height="35px" width="35px">
 					<img src="imgs/icons/tw.png" height="35px" width="35px">
 					<img src="imgs/icons/ln.png" height="35px" width="35px">
 				</div>
 				© 2015 EMP Media. All Rights Reserved. | <a href="#" class="active">Our Terms and Conditions</a>
 			</div>
-			
+
 
 		</footer>
-		
+
         <script src="js/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
-			
+
 		<script src="js/custom.js"></script>
-		
-		
+
+
 	</body>
 </html>
