@@ -38,7 +38,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<p>
-<h1 style="color:#1e5869">Welcome</h1>Guest edited by former Dragons’ Den investor and business guru, James Caan CBE, <em>Your Business</em> magazine gives you all the advice you need if you are starting and running your own business. From finance, to e-commerce and accountancy to marketing, <em>Your Business</em> is an expert-led publication that gives you the inside track on how to build and run a successful business.</p>	</div>
+<h1 style="color:#1e5869">Welcome</h1>Guest edited by former <em>Dragons’ Den</em> investor and business guru, James Caan CBE, <em>Your Business</em> magazine gives you all the advice you need if you are starting and running your own business. From finance, to e-commerce and accountancy to marketing, <em>Your Business</em> is an expert-led publication that gives you the inside track on how to build and run a successful business.</p>	</div>
 <div class="col-md-4 hide"><img src="imgs/yourbusiness.png" width="" class="img-responsive pull-right"></div>
 				<div class="col-md-4" id="hide" >
 					<h1 class="text-center" style="color:#1e5869" id="formme">Get your free copy</h1>
@@ -59,7 +59,7 @@
 						<div class="form-group" >
 		    				<input type="text" class="form-control" name="company"  placeholder="Your company name" />
 		    			</div>
-		    			<input type="submit" value="REGISTER" name="submit" ng-disabled="!userReg.$valid" class="btn form-control btn-success" style="border-color:#1e5869; background-color:#1e5869; color:#fff" onclick="Validate()">
+		    			<input type="submit" value="SUBMIT" name="submit" ng-disabled="!userReg.$valid" class="btn form-control btn-success" style="border-color:#1e5869; background-color:#1e5869; color:#fff" onclick="Validate()">
 		    	</form>
 		    	<?php
 
